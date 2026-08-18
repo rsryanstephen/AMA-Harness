@@ -1,0 +1,30 @@
+hooks/sandbox-allow.log
+*.log
+node_modules
+**/__pycache__
+# real config values, UNTRACKED since the Octopus "Claude Harness" library variable set
+# became the cross-machine source of truth (scripts/octopus-config-sync.sh fetch|push).
+# The example file stays tracked as the schema; install.ps1 seeds a fresh clone from it.
+/harness-config.json
+# per-machine repo roots + discovered slug->path index (PROJ-15143) -- lives at
+# ~/.claude/.harness-local.json, outside this repo's tree; defensive entry only, in
+# case it's ever relocated under skills/ or hooks/
+.harness-local.json
+# real chat-log transcripts, centralized here via reversed symlinks (session cwd holds
+# a symlink pointing in here) -- never publish real conversation content in a repo other
+# adopters clone.
+/Chat files/
+# reversed symlinks in the repo root pointing into /Chat files/ -- per-machine,
+# hardcode an absolute local path, dangle on any other clone. The /Chat files/ entry
+# above only covers the central directory, not this half of the design.
+/*Chat.md
+# per-machine session bookkeeping (real files here now, symlinked back from
+# ~/.claude/sessions.txt|.md via scripts/install.ps1) -- adopter-specific runtime
+# state, never shareable.
+/sessions.txt
+/sessions.md
+# never commit a private key/cert, or a plaintext-secret scratch file like the one this
+# repo briefly had at "MongoDb connection for cohorts and cohort reports/" -- see
+# ama-mongo-access skill, connection strings get pulled live from ECS, never stored here.
+*.pem
+/MongoDb connection for cohorts and cohort reports/

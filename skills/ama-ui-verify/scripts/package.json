@@ -1,0 +1,9 @@
+{
+  "name": "ama-ui-verify-scripts",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Playwright deps for ama-ui-verify's headless UI verification scripts.",
+  "dependencies": {
+    "playwright": "^1.48.0"
+  }
+}

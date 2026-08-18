@@ -1,0 +1,12 @@
+{
+  "reposRoots": [
+    {
+      "path": "~/path/to/your/repos-root",
+      "fleet": "app"
+    }
+  ],
+  "sandboxTrustedRoots": [
+    "~/path/to/your/repos-root"
+  ],
+  "repoIndex": []
+}

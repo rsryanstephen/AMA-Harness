@@ -1,0 +1,109 @@
+{
+  "user": {
+    "email": "you@example.com",
+    "displayName": "Your Name",
+    "windowsUsername": "your.windows.username",
+    "jiraAccountId": ""
+  },
+  "atlassian": {
+    "cloudId": "yourorg.atlassian.net",
+    "jiraProjectKey": "PROJ",
+    "jiraBoardId": "1",
+    "confluenceSpaceId": "",
+    "confluenceParentPageId": "",
+    "harnessEpicKey": "",
+    "regressionsTicketKey": "",
+    "epicLinkFieldId": "",
+    "confluenceSpaceKey": "",
+    "backlogPageId": "",
+    "pagesWithNestedMedia": [],
+    "teamMeetingNotes": {
+      "titleWords": []
+    }
+  },
+  "aws": {
+    "accountNumber": "000000000000",
+    "region": "us-east-1",
+    "redshiftClusterId": "",
+    "redshiftDatabase": "",
+    "codeArtifact": {
+      "domain": "",
+      "repository": ""
+    }
+  },
+  "octopus": {
+    "serverUrl": "https://yourorg.octopus.app",
+    "spaceId": "Spaces-1",
+    "automationServiceAccountEmail": "automation@example.com",
+    "projectNamePatterns": [],
+    "environmentIds": {
+      "development": "",
+      "qa": "",
+      "staging": "",
+      "production": ""
+    }
+  },
+  "mongo": {
+    "bastionUser": "ubuntu",
+    "bastionHosts": {
+      "qa": "",
+      "staging": "",
+      "production": ""
+    },
+    "localPort": 27018
+  },
+  "graylog": {
+    "host": "http://your-graylog-host:9000",
+    "alertStreamId": ""
+  },
+  "bitbucket": {
+    "org": "yourorg",
+    "selfUuid": "",
+    "repoSlugPrefix": "",
+    "defaultPrReviewers": [
+      { "name": "Reviewer Name", "uuid": "" }
+    ],
+    "etlFixReviewers": [
+      { "name": "Reviewer Name", "uuid": "" }
+    ]
+  },
+  "ama": {
+    "etlAssigneeAccountId": "",
+    "etlAssigneeName": ""
+  },
+  "packages": {
+    "libraryPrefix": ""
+  },
+  "app": {
+    "domains": {
+      "prod": "yourapp.example.com",
+      "qa": "qa.yourapp.example.com",
+      "staging": "staging.yourapp.example.com",
+      "adminQa": "admin-qa.yourapp.example.com",
+      "dev": "dev.yourapp.example.com"
+    }
+  },
+  "slack": {
+    "amaSupportChannelId": "",
+    "amaSupportChannelName": ""
+  },
+  "embs": {
+    "calendarUrl": "",
+    "googleCalendarId": "primary",
+    "noticeSenders": [],
+    "noticeSubjectPrefix": "DATA NOTICE:",
+    "noticeCheckDays": 7,
+    "noticeLookbackDays": 120,
+    "noticeOverlapDays": 3,
+    "noticeSlackMinTier": 2,
+    "noticeReportTarget": ""
+  },
+  "releaseNotes": {
+    "emailRecipients": [],
+    "emailSignOffName": "Your Name",
+    "approverSlackUserIds": [
+      { "name": "Approver Name", "slackUserId": "" }
+    ],
+    "pdfFooter": ""
+  }
+}

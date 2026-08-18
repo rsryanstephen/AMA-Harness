@@ -1,0 +1,583 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "env": {
+    "CLAUDE_CODE_USE_POWERSHELL_TOOL": "1"
+  },
+  "permissions": {
+    "allow": [
+      "Edit",
+      "Bash",
+      "PowerShell",
+      "Read",
+      "Skill",
+      "Grep",
+      "Glob",
+      "Write",
+      "Agent",
+      "Agent(WriteFile)",
+      "Agent(ReadFile)",
+      "Agent(DeleteFile)",
+      "Agent(MoveFile)",
+      "Agent(Explore)",
+      "ExitPlanMode",
+      "LSP",
+      "Monitor",
+      "NotebookEdit",
+      "TaskCreate",
+      "TaskGet",
+      "TaskList",
+      "TaskOutput",
+      "TaskStop",
+      "TaskUpdate",
+      "TodoWrite",
+      "ToolSearch",
+      "WebFetch",
+      "WebSearch",
+      "WebSearch(*)",
+      "Artifact",
+      "Artifact(*)",
+      "KillShell",
+      "Write(*)",
+      "Bash(rm *)",
+      "Bash(rmdir *)",
+      "Bash(*)",
+      "Bash(git *)",
+      "Bash(dotnet *)",
+      "Bash(bash \"$HOME/.claude/*)",
+      "Bash(bash ~/.claude/*)",
+      "PowerShell(Remove-Item *)",
+      "PowerShell(rm *)",
+      "PowerShell(rmdir *)",
+      "PowerShell(del *)",
+      "PowerShell(rd *)",
+      "PowerShell(ri *)",
+      "PowerShell(erase *)",
+      "Skill(update-config)",
+      "Skill(update-config:*)",
+      "mcp__claude_ai_Atlassian__*",
+      "mcp__claude_ai_Atlassian__addCommentToJiraIssue",
+      "mcp__claude_ai_Atlassian__addWorklogToJiraIssue",
+      "mcp__claude_ai_Atlassian__atlassianUserInfo",
+      "mcp__claude_ai_Atlassian__createConfluenceFooterComment",
+      "mcp__claude_ai_Atlassian__createConfluenceInlineComment",
+      "mcp__claude_ai_Atlassian__createConfluencePage",
+      "mcp__claude_ai_Atlassian__createIssueLink",
+      "mcp__claude_ai_Atlassian__createJiraIssue",
+      "mcp__claude_ai_Atlassian__editJiraIssue",
+      "mcp__claude_ai_Atlassian__fetch",
+      "mcp__claude_ai_Atlassian__getAccessibleAtlassianResources",
+      "mcp__claude_ai_Atlassian__getConfluenceCommentChildren",
+      "mcp__claude_ai_Atlassian__getConfluencePage",
+      "mcp__claude_ai_Atlassian__getConfluencePageDescendants",
+      "mcp__claude_ai_Atlassian__getConfluencePageFooterComments",
+      "mcp__claude_ai_Atlassian__getConfluencePageInlineComments",
+      "mcp__claude_ai_Atlassian__getConfluenceSpaces",
+      "mcp__claude_ai_Atlassian__getIssueLinkTypes",
+      "mcp__claude_ai_Atlassian__getJiraIssue",
+      "mcp__claude_ai_Atlassian__getJiraIssueRemoteIssueLinks",
+      "mcp__claude_ai_Atlassian__getJiraIssueTypeMetaWithFields",
+      "mcp__claude_ai_Atlassian__getJiraProjectIssueTypesMetadata",
+      "mcp__claude_ai_Atlassian__getPagesInConfluenceSpace",
+      "mcp__claude_ai_Atlassian__getTransitionsForJiraIssue",
+      "mcp__claude_ai_Atlassian__getVisibleJiraProjects",
+      "mcp__claude_ai_Atlassian__lookupJiraAccountId",
+      "mcp__claude_ai_Atlassian__search",
+      "mcp__claude_ai_Atlassian__searchConfluenceUsingCql",
+      "mcp__claude_ai_Atlassian__searchJiraIssuesUsingJql",
+      "mcp__claude_ai_Atlassian__transitionJiraIssue",
+      "mcp__claude_ai_Atlassian__updateConfluencePage",
+      "mcp__claude_ai_Google_Calendar__list_calendars",
+      "mcp__claude_ai_Google_Calendar__search_events",
+      "mcp__claude_ai_Google_Calendar__list_events",
+      "mcp__claude_ai_Google_Calendar__create_event",
+      "mcp__claude_ai_Slack__slack_send_message",
+      "mcp__claude_ai_Slack__slack_search_users",
+      "mcp__claude_ai_Slack__slack_search_channels",
+      "mcp__claude_ai_Slack__slack_create_canvas",
+      "mcp__claude_ai_Gmail__create_draft",
+      "mcp__claude_ai_Gmail__search_threads",
+      "mcp__claude_ai_Gmail__get_thread",
+      "mcp__claude_ai_Gmail__get_message",
+      "mcp__claude-in-chrome"
+    ],
+    "deny": [
+      "Read(./.env)",
+      "Read(./.env.*)",
+      "Bash(curl * | sh*)",
+      "Bash(curl * | bash*)",
+      "Bash(curl * -o /etc/*)",
+      "Bash(curl * -o /usr/*)",
+      "Bash(sudo *)",
+      "Bash(eval *)",
+      "Bash(exec *)",
+      "Bash(chown *)",
+      "Bash(kill *)",
+      "Bash(xargs *)",
+      "Bash(fdisk *)",
+      "Bash(erase *)",
+      "Bash(iwr *)",
+      "Bash(irm *)",
+      "Bash(iex *)",
+      "Bash(git push --force *)",
+      "Bash(git push -f *)",
+      "Bash(git push --force)",
+      "Bash(git push -f)",
+      "PowerShell(curl * | iex*)",
+      "PowerShell(sudo *)",
+      "PowerShell(eval *)",
+      "PowerShell(kill *)",
+      "PowerShell(chown *)",
+      "PowerShell(Stop-Process *)",
+      "PowerShell(iwr *)",
+      "PowerShell(irm *)",
+      "PowerShell(iex *)",
+      "PowerShell(git push --force *)",
+      "PowerShell(git push -f *)"
+    ]
+  },
+  "autoMode": {
+    "environment": [
+      "$defaults",
+      "Organization: YourCompany. Primary use of Claude Code: software development and infrastructure automation on the AMA_APP (PROJ) fleet.",
+      "Source control: Bitbucket Cloud org `yourorg` -- all repos under it, primarily the `product-service-*` repos.",
+      "Cloud provider(s): AWS, account 000000000000, region us-east-1 (ECS, Lambda, ElastiCache, DocumentDB, Redshift).",
+      "Internal package registry: AWS CodeArtifact domain `yourorg`, repository `<repository>` -- the `YourCompany.Product.*` NuGet libraries install from there.",
+      "Key internal services: Octopus Deploy at https://yourorg.octopus.app (Spaces-1); Graylog at http://your-graylog-host:9000; Jira/Confluence Cloud at yourorg.atlassian.net; the eMBS vendor site at embs.com.",
+      "Trusted internal domains: example-app.com and its qa./staging./dev./admin-qa. subdomains -- the AMA app's own environments.",
+      "Sensitive remote targets: the Octopus Production environment (<production>), production ECS clusters, and the production DocumentDB / Postgres / Redshift clusters.",
+      "Repository visibility: private -- every repo in this fleet is a private Bitbucket Cloud repo under the `yourorg` org. None are public.",
+      "Org-specific CLIs: this harness's own scripts under `~/.claude/scripts` and `~/.claude/hooks` (octopus-config-sync.sh, jira-*.sh, rs-query.sh, embs-notices-*.sh, verify-*.sh), plus `aws`, `gh`, `dotnet`, and direct curl calls to the Octopus / Graylog / Atlassian / Bitbucket REST APIs.",
+      "Secrets management: the shared harness config lives in the Octopus 'Claude Harness' library variable set; per-person credentials live only in shell env vars (ATLASSIAN_API_TOKEN, BITBUCKET_API_KEY, GRAYLOG_PAT, OCTOPUS_API_KEY, MONGO_SSH_KEY_PASSPHRASE). Secrets are never committed to a repo.",
+      "CI/CD deploy targets: Bitbucket Pipelines builds and publishes NuGet packages to AWS CodeArtifact; Octopus Deploy (Spaces-1, projects `product-service-*` and `other-project-*`) deploys to Development (<development>), QA (<qa>), Staging (<staging>) and Production (<production>).",
+      "Trusted cloud buckets: s3://example-app.com, s3://www.example-app.com, s3://qa.yourapp.example.com, s3://staging.yourapp.example.com and s3://ama-qa.yourapp.example.com (the S3-hosted exporterplus/admin frontends), plus s3://hs-aggregation-api-packages and s3://hs-pipelines (build artifacts)."
+    ]
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "bash \"$HOME/.claude/hooks/statusline.sh\""
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": ".*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$HOME/.claude/hooks/sandbox-allow.sh\"",
+            "shell": "bash",
+            "timeout": 5
+          }
+        ]
+      },
+      {
+        "matcher": "Bash|PowerShell",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$HOME/.claude/hooks/git-commit-ticket-gate.sh\"",
+            "shell": "bash",
+            "timeout": 5,
+            "statusMessage": "Checking commit message for a ticket ref"
+          },
+          {
+            "type": "command",
+            "command": "bash \"$HOME/.claude/hooks/bare-cd-gate.sh\"",
+            "shell": "bash",
+            "timeout": 5,
+            "statusMessage": "Checking for a leaking bare cd"
+          },
+          {
+            "type": "command",
+            "command": "bash \"$HOME/.claude/hooks/inplace-edit-gate.sh\"",
+            "shell": "bash",
+            "timeout": 5,
+            "statusMessage": "Checking sed -i isn't about to destroy a ~/.claude symlink"
+          },
+          {
+            "type": "command",
+            "command": "bash \"$HOME/.claude/hooks/git-commit-scope-gate.sh\"",
+            "shell": "bash",
+            "timeout": 5,
+            "statusMessage": "Checking commit isn't sweeping in unstaged-elsewhere files"
+          },
+          {
+            "type": "command",
+            "command": "bash \"$HOME/.claude/hooks/master-push-direct-gate.sh\"",
+            "shell": "bash",
+            "timeout": 5,
+            "statusMessage": "Checking master push rides a hotfix/release merge"
+          },
+          {
+            "type": "command",
+            "command": "bash \"$HOME/.claude/hooks/grep-memory-gate.sh\"",
+            "shell": "bash",
+            "timeout": 5,
+            "statusMessage": "Checking grep for memory-blowup risk"
+          },
+          {
+            "type": "command",
+            "command": "bash \"$HOME/.claude/hooks/parallel-fanout-gate.sh\"",
+            "shell": "bash",
+            "timeout": 5,
+            "statusMessage": "Checking for parallel Bash/PowerShell fan-out"
+          },
+          {
+            "type": "command",
+            "command": "bash \"$HOME/.claude/hooks/deploy-verify-confirm-gate.sh\"",
+            "shell": "bash",
+            "timeout": 5,
+            "statusMessage": "Checking deploy verification was approved by the user"
+          },
+          {
+            "type": "command",
+            "command": "bash \"$HOME/.claude/hooks/aggregation-secret-gate.sh\"",
+            "shell": "bash",
+            "timeout": 5,
+            "statusMessage": "Checking a DB credential isn't being printed to the transcript"
+          },
+          {
+            "type": "command",
+            "command": "bash \"$HOME/.claude/hooks/publish-scrub-gate.sh\"",
+            "shell": "bash",
+            "timeout": 30,
+            "statusMessage": "Checking staged harness content won't abort the public-mirror publish"
+          },
+          {
+            "type": "command",
+            "command": "bash \"$HOME/.claude/hooks/unanalyzable-script-gate.sh\"",
+            "shell": "bash",
+            "timeout": 5,
+            "statusMessage": "Checking for an inline multi-line script that would force a manual prompt"
+          },
+          {
+            "type": "command",
+            "command": "bash \"$HOME/.claude/hooks/short-path-gate.sh\"",
+            "shell": "bash",
+            "timeout": 5,
+            "statusMessage": "Checking for an 8.3 short path that would force a manual prompt"
+          }
+        ]
+      },
+      {
+        "matcher": "Bash|PowerShell",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$HOME/.claude/hooks/octopus-lambda-delete-gate.sh\""
+          }
+        ]
+      },
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$HOME/.claude/hooks/symlink-write-gate.sh\"",
+            "shell": "bash",
+            "timeout": 5,
+            "statusMessage": "Checking for a direct write through a harness symlink"
+          },
+          {
+            "type": "command",
+            "command": "bash \"$HOME/.claude/hooks/native-memory-gate.sh\"",
+            "shell": "bash",
+            "timeout": 5,
+            "statusMessage": "Checking for a write into native (non-durable) auto-memory"
+          },
+          {
+            "type": "command",
+            "command": "bash \"$HOME/.claude/hooks/skill-bloat-gate.sh\"",
+            "shell": "bash",
+            "timeout": 5,
+            "statusMessage": "Checking skill edit for incident-narrative bloat"
+          },
+          {
+            "type": "command",
+            "command": "bash \"$HOME/.claude/hooks/standup-empty-section-gate.sh\"",
+            "shell": "bash",
+            "timeout": 5,
+            "statusMessage": "Checking standup notes for an unearned empty section"
+          }
+        ]
+      },
+      {
+        "matcher": "Skill",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$HOME/.claude/hooks/chrome-verify-nudge.sh\"",
+            "shell": "bash",
+            "timeout": 5,
+            "statusMessage": "Checking whether --chrome is worth suggesting for this UI verify"
+          }
+        ]
+      },
+      {
+        "matcher": "Bash|PowerShell",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$HOME/.claude/hooks/chrome-verify-nudge.sh\"",
+            "shell": "bash",
+            "timeout": 5,
+            "statusMessage": "Checking whether Claude-in-Chrome should drive this instead of headless Playwright"
+          }
+        ]
+      },
+      {
+        "matcher": "Agent",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$HOME/.claude/hooks/subagent-model-tiering-gate.sh\"",
+            "shell": "bash",
+            "timeout": 5,
+            "statusMessage": "Checking subagent model tiering"
+          }
+        ]
+      },
+      {
+        "matcher": "mcp__.*__updateConfluencePage",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$HOME/.claude/hooks/confluence-media-gate.sh\"",
+            "shell": "bash",
+            "timeout": 5,
+            "statusMessage": "Checking an html write won't drop a nested image"
+          }
+        ]
+      },
+      {
+        "matcher": "mcp__.*__slack_send_message|mcp__.*__slack_schedule_message",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$HOME/.claude/hooks/slack-brevity-gate.sh\"",
+            "shell": "bash",
+            "timeout": 5,
+            "statusMessage": "Checking the Slack message is short"
+          }
+        ]
+      },
+      {
+        "matcher": "mcp__.*__createJiraIssue|Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$HOME/.claude/hooks/jira-ticket-fields-gate.sh\"",
+            "shell": "bash",
+            "timeout": 5,
+            "statusMessage": "Checking new Jira ticket has an assignee"
+          },
+          {
+            "type": "command",
+            "command": "bash \"$HOME/.claude/hooks/harness-ticket-gate.sh\"",
+            "shell": "bash",
+            "timeout": 5,
+            "statusMessage": "Checking ticket isn't a harness sub-ticket"
+          },
+          {
+            "type": "command",
+            "command": "bash \"$HOME/.claude/hooks/jira-ticket-description-gate.sh\"",
+            "shell": "bash",
+            "timeout": 5,
+            "statusMessage": "Checking new Jira ticket has a filled-in description"
+          }
+        ]
+      },
+      {
+        "matcher": "mcp__.*__(createJiraIssue|editJiraIssue)|Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$HOME/.claude/hooks/jira-fixversion-confirm-gate.sh\"",
+            "shell": "bash",
+            "timeout": 5,
+            "statusMessage": "Checking release/hotfix Fix Version is confirmed created"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$HOME/.claude/hooks/harness-edit-hash.sh\" 2>/dev/null || true",
+            "shell": "bash",
+            "timeout": 5,
+            "statusMessage": "Recording harness edit hash for cross-session guard"
+          },
+          {
+            "type": "command",
+            "command": "bash \"$HOME/.claude/hooks/readme-currency-gate.sh\" 2>/dev/null || true",
+            "shell": "bash",
+            "timeout": 5,
+            "statusMessage": "Checking AGENTS.md currency for harness edit"
+          },
+          {
+            "type": "command",
+            "command": "bash \"$HOME/.claude/hooks/human-readme-edit-gate.sh\" 2>/dev/null || true",
+            "shell": "bash",
+            "timeout": 5,
+            "statusMessage": "Checking README.md edit is human-visible"
+          },
+          {
+            "type": "command",
+            "command": "bash \"$HOME/.claude/hooks/octopus-config-push-reminder.sh\" 2>/dev/null || true",
+            "shell": "bash",
+            "timeout": 5
+          }
+        ]
+      },
+      {
+        "matcher": "mcp__.*__createJiraIssue|Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$HOME/.claude/hooks/backlog-page-reminder.sh\" 2>/dev/null || true",
+            "shell": "bash",
+            "timeout": 5,
+            "statusMessage": "Checking new ticket is on the AMA Backlog"
+          }
+        ]
+      },
+      {
+        "matcher": "mcp__claude-in-chrome__tabs_close_mcp",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$HOME/.claude/hooks/chrome-verify-compact-nudge.sh\" 2>/dev/null || true",
+            "shell": "bash",
+            "timeout": 5,
+            "statusMessage": "Checking whether a /compact nudge is due after closing a verify tab"
+          }
+        ]
+      },
+      {
+        "matcher": "Bash|PowerShell",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$HOME/.claude/hooks/git-push-ticket-reminder.sh\" 2>/dev/null || true",
+            "shell": "bash",
+            "timeout": 5
+          },
+          {
+            "type": "command",
+            "command": "bash \"$HOME/.claude/hooks/develop-backmerge-reminder.sh\" 2>/dev/null || true",
+            "shell": "bash",
+            "timeout": 5
+          },
+          {
+            "type": "command",
+            "command": "bash \"$HOME/.claude/hooks/octopus-prod-deploy-ticket-sweep-reminder.sh\" 2>/dev/null || true",
+            "shell": "bash",
+            "timeout": 5
+          },
+          {
+            "type": "command",
+            "command": "bash \"$HOME/.claude/hooks/library-version-sync-reminder.sh\" 2>/dev/null || true",
+            "shell": "bash",
+            "timeout": 5
+          },
+          {
+            "type": "command",
+            "command": "bash \"$HOME/.claude/hooks/ticket-in-progress-reminder.sh\" 2>/dev/null || true",
+            "shell": "bash",
+            "timeout": 5
+          },
+          {
+            "type": "command",
+            "command": "bash \"$HOME/.claude/hooks/octopus-config-push-reminder.sh\" 2>/dev/null || true",
+            "shell": "bash",
+            "timeout": 5
+          }
+        ]
+      },
+      {
+        "matcher": "Bash|PowerShell",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$HOME/.claude/hooks/octopus-lambda-delete-gate.sh\" --record 2>/dev/null || true"
+          }
+        ]
+      }
+    ],
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$HOME/.claude/hooks/log-session-start.sh\" 2>/dev/null || true",
+            "shell": "bash",
+            "timeout": 5,
+            "statusMessage": "Logging session resume command"
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$HOME/.claude/hooks/on-prompt.sh\" 2>/dev/null || true",
+            "shell": "bash",
+            "timeout": 60,
+            "statusMessage": "Logging prompt + naming session"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$HOME/.claude/hooks/on-stop.sh\" 2>/dev/null || true",
+            "shell": "bash",
+            "timeout": 10,
+            "statusMessage": "Mirroring reply text to session log"
+          },
+          {
+            "type": "command",
+            "command": "bash \"$HOME/.claude/hooks/notify-sound.sh\" stop 2>/dev/null || true",
+            "shell": "bash",
+            "timeout": 5,
+            "statusMessage": "Playing turn-finished sound"
+          }
+        ]
+      }
+    ],
+    "Notification": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$HOME/.claude/hooks/notify-sound.sh\" 2>/dev/null || true",
+            "shell": "bash",
+            "timeout": 5,
+            "statusMessage": "Playing attention-needed sound"
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$HOME/.claude/hooks/on-session-end.sh\" 2>/dev/null || true",
+            "shell": "bash",
+            "timeout": 5,
+            "statusMessage": "Logging resume command on exit"
+          }
+        ]
+      }
+    ]
+  }
+}

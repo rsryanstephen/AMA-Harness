@@ -1,0 +1,7 @@
+amaapitesting-api-esvc
+amauitesting-api-esvc
+cacheupdatecoordinator-api-esvc
+organisationexports-api-esvc
+exporterplus-api-esvc
+hs-mapping-tool-esvc
+# feedback-api-esvc

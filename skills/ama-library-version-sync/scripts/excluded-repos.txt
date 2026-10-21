@@ -1,0 +1,7 @@
+# Repos excluded from version-sync consumer scans (find-consumers.sh).
+# One repo name per line. Lines starting with # are comments.
+
+# Deprecated duplicate of product-service-search's Search.Cache package
+# (both published a package literally named YourCompany.Product.Search.Cache
+# under different VersionPrefix lines -- product-service-search is canonical).
+product-service-search-cache

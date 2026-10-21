@@ -1,0 +1,281 @@
+{
+  "user": {
+    "email": "you@example.com",
+    "displayName": "Your Name",
+    "windowsUsername": "your.windows.username",
+    "jiraAccountId": "",
+    "secondaryEmail": "",
+    "slackUserId": ""
+  },
+  "atlassian": {
+    "cloudId": "yourorg.atlassian.net",
+    "jiraProjectKey": "PROJ",
+    "jiraBoardId": "1",
+    "confluenceSpaceId": "",
+    "confluenceParentPageId": "",
+    "harnessEpicKey": "",
+    "securityEpicKey": "",
+    "regressionsTicketKey": "",
+    "harnessTestTicketKey": "",
+    "epicLinkFieldId": "",
+    "confluenceSpaceKey": "",
+    "backlogPageId": "",
+    "pagesWithNestedMedia": [
+      "<one entry per line; this element only declares the type>"
+    ],
+    "teamMeetingNotes": {
+      "titleWords": [
+        "<one entry per line; this element only declares the type>"
+      ]
+    },
+    "deferredBacklogPageId": "",
+    "cloudUuid": "00000000-0000-0000-0000-000000000000",
+    "standupFormTemplateId": "",
+    "standupTrackingIssueKey": "",
+    "standupActionItemsPageId": "",
+    "securityImprovementsPageId": "",
+    "costSavingsPageId": ""
+  },
+  "aws": {
+    "accountNumber": "000000000000",
+    "region": "us-east-1",
+    "redshiftClusterId": "",
+    "redshiftDatabase": "",
+    "codeArtifact": {
+      "domain": "",
+      "repository": ""
+    }
+  },
+  "octopus": {
+    "serverUrl": "https://yourorg.octopus.app",
+    "spaceId": "Spaces-1",
+    "automationServiceAccountEmail": "automation@example.com",
+    "projectNamePatterns": [
+      "<one entry per line; this element only declares the type>"
+    ],
+    "environmentIds": {
+      "development": "",
+      "qa": "",
+      "staging": "",
+      "production": ""
+    }
+  },
+  "mongo": {
+    "bastionUser": "ubuntu",
+    "bastionHosts": {
+      "qa": "",
+      "staging": "",
+      "production": ""
+    },
+    "localPort": 27018
+  },
+  "graylog": {
+    "host": "http://your-graylog-host:9000",
+    "alertStreamId": "",
+    "suppressPipelineId": ""
+  },
+  "bitbucket": {
+    "org": "yourorg",
+    "selfUuid": "",
+    "repoSlugPrefix": "",
+    "defaultPrReviewers": [
+      {
+        "name": "Reviewer Name",
+        "uuid": ""
+      }
+    ],
+    "etlFixReviewers": [
+      {
+        "name": "Reviewer Name",
+        "uuid": ""
+      }
+    ]
+  },
+  "ama": {
+    "etlAssigneeAccountId": "",
+    "etlAssigneeName": "",
+    "uiTesterName": ""
+  },
+  "packages": {
+    "libraryPrefix": ""
+  },
+  "app": {
+    "domains": {
+      "prod": "yourapp.example.com",
+      "qa": "qa.yourapp.example.com",
+      "staging": "staging.yourapp.example.com",
+      "adminQa": "admin-qa.yourapp.example.com",
+      "dev": "dev.yourapp.example.com"
+    }
+  },
+  "slack": {
+    "amaSupportChannelId": "",
+    "amaSupportChannelName": "",
+    "actionItemsCanvasId": ""
+  },
+  "standup": {
+    "notifyMode": "team",
+    "notifyTargets": {
+      "team": "",
+      "supportChannel": "",
+      "selfDm": ""
+    },
+    "notifyTargetNames": {
+      "team": "",
+      "supportChannel": "",
+      "selfDm": ""
+    },
+    "notifyGreetings": {
+      "team": "",
+      "supportChannel": "",
+      "selfDm": ""
+    },
+    "actionItems": {
+      "sourceChannel": "",
+      "ownerAliases": [
+        "<one entry per line; this element only declares the type>"
+      ],
+      "meetingTitleExcludePatterns": [
+        "Company Broadcast"
+      ]
+    }
+  },
+  "embs": {
+    "calendarUrl": "",
+    "googleCalendarId": "primary",
+    "noticeSenders": [
+      "<one entry per line; this element only declares the type>"
+    ],
+    "noticeLabels": [
+      "<one entry per line; this element only declares the type>"
+    ],
+    "noticeSubjectPrefix": "DATA NOTICE:",
+    "noticeCheckDays": 7,
+    "noticeLookbackDays": 120,
+    "noticeOverlapDays": 3,
+    "noticeSlackMinTier": 2,
+    "noticeReportTarget": "",
+    "supportRecipients": [
+      "<one entry per line; this element only declares the type>"
+    ],
+    "supportCcRecipients": [
+      "<one entry per line; this element only declares the type>"
+    ]
+  },
+  "awsNotices": {
+    "checkDays": 7,
+    "lookbackDays": 120,
+    "overlapDays": 3,
+    "slackMinTier": 2,
+    "watchLeadDays": 30,
+    "deadlineHorizonDays": 90,
+    "newKeyFloorUsd": 25,
+    "reportTarget": "",
+    "noticeForwarders": [
+      "<one entry per line; this element only declares the type>",
+      "no-reply@certificates.amazon.com",
+      "no-reply@sns.amazonaws.com"
+    ],
+    "noticeLabels": [
+      "<one entry per line; this element only declares the type>"
+    ]
+  },
+  "fleetHealth": {
+    "reportTarget": ""
+  },
+  "clientMail": {
+    "domains": [
+      "<one entry per line; this element only declares the type>"
+    ]
+  },
+  "supportNotices": {
+    "senders": [
+      "<one entry per line; this element only declares the type>"
+    ],
+    "mode": "construction",
+    "targets": {
+      "construction": {
+        "ack": "",
+        "etlOwner": ""
+      },
+      "live": {
+        "ack": "",
+        "etlOwner": ""
+      }
+    },
+    "createTickets": false,
+    "autoFix": false,
+    "autoHotfix": false,
+    "timezone": "Africa/Johannesburg",
+    "dailyCheckHour": 17,
+    "weekendMorningCheckHour": 9,
+    "postProcessingDays": 2,
+    "postProcessingEveryHours": 3,
+    "lookbackHours": 36
+  },
+  "releaseNotes": {
+    "emailRecipients": [
+      "<one entry per line; this element only declares the type>"
+    ],
+    "greetingNames": {
+      "first.recipient@example.com": "Name they go by"
+    },
+    "emailSignOffName": "Your Name",
+    "approverSlackUserIds": [
+      {
+        "name": "Approver Name",
+        "slackUserId": ""
+      }
+    ],
+    "pdfFooter": ""
+  },
+  "audiences": {
+    "defaultLevel": "business",
+    "people": [
+      {
+        "name": "Person One",
+        "emails": [
+          "first.recipient@example.com"
+        ],
+        "slackUserIds": [
+          "<one entry per line; this element only declares the type>"
+        ],
+        "level": "business",
+        "avoid": [
+          "<one entry per line; this element only declares the type>"
+        ],
+        "notes": "what to keep off this person's mail, in their own words"
+      }
+    ]
+  },
+  "azure": {
+    "subscriptionId": "<azure subscription id holding the App Insights resources>",
+    "tenantDomain": "<tenant domain>",
+    "appInsights": {
+      "qa": {
+        "resourceGroup": "<rg>",
+        "name": "<component name>",
+        "appId": "<Application ID: properties.AppId / the API Access blade>"
+      },
+      "staging": {
+        "resourceGroup": "<rg>",
+        "name": "<component name>",
+        "appId": "<Application ID: properties.AppId / the API Access blade>"
+      },
+      "production": {
+        "resourceGroup": "<rg>",
+        "name": "<component name>",
+        "appId": "<Application ID: properties.AppId / the API Access blade>"
+      }
+    }
+  },
+  "backlogStale": {
+    "checkDays": 7
+  },
+  "backlogQaSweep": {
+    "reporterName": "<QA person's Jira display name; the biweekly sweep adds their new Open tickets to the backlog>",
+    "reporterAccountId": "<their Jira accountId; blank = resolved from reporterName at run time>",
+    "reportTarget": "<Slack user/DM id that gets the sweep report>",
+    "slackEveryRunUntil": "<YYYY-MM-DD: DM every run through this date, failures only after; blank = failures only>"
+  }
+}

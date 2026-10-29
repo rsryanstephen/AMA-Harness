@@ -1,0 +1,6 @@
+# Services other services need at START-UP: scale-env.sh <env> <n>0 scales these first and
+# waits for them to be stable before the rest. 2026-10-22 all-at-once wake: resultsprocessor
+# crash-looped on "PersistentChannel timed out" (RabbitMQ not up), reports' startup migration
+# died on "Name or service not known (product-service-fieldtablemapper...)".
+hs-rabbitmq-esvc
+fieldtablemapper-api-esvc
